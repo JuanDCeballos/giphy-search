@@ -1,4 +1,22 @@
+import { useEffect, useState } from 'react';
+
 const SearchBar = () => {
+  const [query, setQuery] = useState('');
+  const [hasSearched, setHasSearched] = useState(false);
+
+  useEffect(() => {
+    if (hasSearched) {
+      setHasSearched((prevHasSearched) => !prevHasSearched);
+    }
+  }, [hasSearched]);
+
+  const handleEnterKey = (e) => {
+    if (e.key == 'Enter') {
+      setHasSearched((prevHasSearched) => !prevHasSearched);
+      console.log('User enter');
+    }
+  };
+
   return (
     <>
       <h1 className='text-center font-black text-4xl mb-5'>
@@ -10,8 +28,18 @@ const SearchBar = () => {
         <span className='text-emerald-400'>Y</span>
       </h1>
       <div className='flex'>
-        <input className='shadow-lg grow h-16' type='text' />
-        <button className='flex justify-center items-center bg-rose-400 text-white w-16 h-16'>
+        <input
+          className='shadow-lg grow h-16 focus:outline-none p-3 text-2xl'
+          type='text'
+          placeholder='Search a GIPHY'
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          onKeyDown={handleEnterKey}
+        />
+        <button
+          className='flex justify-center items-center bg-rose-400 text-white w-16 h-16'
+          onClick={() => setHasSearched((prevHasSearched) => !prevHasSearched)}
+        >
           <svg
             xmlns='http://www.w3.org/2000/svg'
             fill='none'
