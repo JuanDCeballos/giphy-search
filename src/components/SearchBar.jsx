@@ -1,11 +1,16 @@
 import { useEffect, useState } from 'react';
+import { getGiphy } from '../helpers/getGiphy';
 
-const SearchBar = () => {
+const SearchBar = ({ setData }) => {
   const [query, setQuery] = useState('');
   const [hasSearched, setHasSearched] = useState(false);
 
   useEffect(() => {
     if (hasSearched) {
+      getGiphy(query).then((data) => {
+        setData(data);
+      });
+
       setHasSearched((prevHasSearched) => !prevHasSearched);
     }
   }, [hasSearched]);
@@ -13,7 +18,6 @@ const SearchBar = () => {
   const handleEnterKey = (e) => {
     if (e.key == 'Enter') {
       setHasSearched((prevHasSearched) => !prevHasSearched);
-      console.log('User enter');
     }
   };
 
