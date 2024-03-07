@@ -10,10 +10,14 @@ const GiphyTable = ({ data }) => {
           ))}
         </div>
       ) : (
-        <div>
-          <h1 className='text-center font-black text-5xl mb-5 py-9'>
-            data not found
-          </h1>
+        <div className='text-center font-black text-5xl mb-5 py-9 text-white'>
+          <span className='underline decoration-yellow-400'>Da</span>
+          <span className='underline decoration-red-400'>ta</span>
+          <span> </span>
+          <span className='underline decoration-purple-400'>not</span>
+          <span> </span>
+          <span className='underline decoration-cyan-400'>fo</span>
+          <span className='underline decoration-emerald-400'>und</span>
         </div>
       )}
     </>
