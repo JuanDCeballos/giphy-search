@@ -15,16 +15,18 @@ const SearchBar = ({ setData }) => {
     }
   }, [hasSearched]);
 
-  const handleEnterKey = (e) => {
+  const handleKeyDown = (e) => {
     if (e.key == 'Enter') {
       setHasSearched((prevHasSearched) => !prevHasSearched);
     }
   };
 
+  const handleClick = () =>
+    setHasSearched((prevHasSearched) => !prevHasSearched);
+
   return (
     <>
-      <h1 className='text-center font-black text-4xl mb-5'>
-        <span className='text-white'>Search for a </span>
+      <h1 className='text-center font-black text-5xl mb-5'>
         <span className='text-yellow-400'>G</span>
         <span className='text-red-400'>I</span>
         <span className='text-purple-400'>P</span>
@@ -38,11 +40,11 @@ const SearchBar = ({ setData }) => {
           placeholder='Search a GIPHY'
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          onKeyDown={handleEnterKey}
+          onKeyDown={handleKeyDown}
         />
         <button
           className='flex justify-center items-center bg-rose-400 text-white w-16 h-16'
-          onClick={() => setHasSearched((prevHasSearched) => !prevHasSearched)}
+          onClick={handleClick}
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
