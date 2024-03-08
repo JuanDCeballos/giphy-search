@@ -1,8 +1,47 @@
-# React + Vite
+# Giphy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is an app for fetching gifs using the Giphy API.
 
-Currently, two official plugins are available:
+## How to use the App?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+1. Clone the project.
+2. Cd to the cloned directory.
+3. npm install.
+4. npm run dev.
+6. Use the App by typing a word in the input field and you'll get the gifs displayed.
+```
+
+## What did I learn?
+
+```
+- How to use and implement the [useState()](https://react.dev/reference/react/useState) hook.
+- How to use and implement the [useEffect()](https://react.dev/reference/react/useEffect) hook.
+- How to use and implement [Tailwind CSS](https://tailwindcss.com/).
+```
+
+## Technologies
+
+[!NOTE]
+This is mainly a Front-end project
+
+```
+- React.js
+- Tailwind CSS
+- Vite
+- NPM
+```
+
+## Features
+
+```
+- Nice UI/UX.
+- Responsive design.
+- Get any gif from the API.
+```
+
+## Credits
+
+For this project I got some Front-end inspiration from [GIPHY](https://giphy.com/).
+
+Made with :blue_heart: by me.
