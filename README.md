@@ -12,18 +12,21 @@ This is an app for fetching gifs using the Giphy API.
 6. Use the App by typing a word in the input field and you'll get the gifs displayed.
 ```
 
+> [!TIP]
+> You can use your own API KEY by just changing the one inside getGiphy.js file.
+
 ## What did I learn?
 
 ```
-- How to use and implement the [useState()](https://react.dev/reference/react/useState) hook.
-- How to use and implement the [useEffect()](https://react.dev/reference/react/useEffect) hook.
-- How to use and implement [Tailwind CSS](https://tailwindcss.com/).
+- How to use and implement the useState() hook.
+- How to use and implement the useEffect()  hook.
+- How to use and implement Tailwind CSS.
 ```
 
 ## Technologies
 
-[!NOTE]
-This is mainly a Front-end project
+> [!NOTE]
+> This is mainly a Front-end project.
 
 ```
 - React.js
